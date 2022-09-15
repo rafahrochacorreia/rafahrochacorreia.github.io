@@ -1,4 +1,4 @@
-### Portifólio Web
+### Portifólio Web :rocket:
 
 >Repositório contendo minhas primeiras páginas web desenvolvidas, utilizado como aprendizado pessoal.
 
