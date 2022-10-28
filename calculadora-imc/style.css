@@ -1,0 +1,185 @@
+/* Todos os elementos dentro da página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+/* Somente o corpo da página */
+body {
+  background-image: url(./cenario.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  object-fit: cover;
+  background-color: #090e22;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Começa com a altura de tela do usuário */
+}
+
+/* Bloco com o resultado do cáculo */
+.hide {
+  display: none !important; /* Responsável por não exibir o bloco de resultado na primeira tela */
+}
+
+/* Bloco que envolve todos os elementos */
+.container {
+  min-width: 400px;
+  min-height: 400px;
+  background-color: #1d1e33;
+  padding: 2rem;
+}
+
+/* Envolve o título, os inputs e os botões */
+#calc-container h2{
+  text-align: center; /* Alinhando o título */
+  margin-bottom: 2rem; /* Afastando os elementos abaixo */
+  color: #ccc;
+}
+
+/* Envolve os inputs */
+.form-inputs {
+  display: flex;
+  flex-direction: column; /* Alinhamento de coluna */
+  justify-content: space-between; /* Espaçar os elementos igualmente */
+}
+
+/* Envolve cada input separadamente */
+.form-control {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Utilizando a largura máxima disponível */
+  margin-bottom: 1rem;
+}
+
+/* Ajustando as labels */
+.form-control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  align-items: center;
+}
+
+/* Ajustando  */
+.form-control input {
+  padding: 1rem 0.5rem;
+}
+
+/* Ajustando os dois botões simultaneamente */
+.action-control {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem; /* Respeita essa margem entre cada um dos botões */
+}
+
+/* Ajustando os botões individualmente */
+button {
+  text-transform: uppercase; /* Colocando o texto em caixa alta */
+  padding: 1rem 1.5rem;
+  background-color: #f44236;
+  border: none; /* Retirando as bordas */
+  color: #fff;
+  cursor: pointer; /* Muda o ponteiro do mouse ao passar pelo botão */
+  opacity: 0.5;
+  flex: 1; /* Utiliza a largura máxima, respeitando o gap aplicado */
+}
+
+/* Ajustando a cor do botão limpar */
+#clear-btn {
+  background-color: #444;
+}
+
+/* Mudando a opacidade do botão ao passar o mouse*/
+button:hover {
+  opacity: 1;
+}
+
+
+
+/* Tabela de Resultados */
+/* Abraça todos os elementos do resultado */
+#result-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Parágrafo onde será exibido o IMC */
+#imc-number {
+  font-size: 2.4rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Parágrafo onde consta a situação atual */
+#imc-info {
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+/* Título das classificações */
+#result-container h3 {
+  margin-top: 1rem;
+  color: #dfdfdf;
+}
+
+/* Tabela classificação*/
+#imc-table {
+  margin: 1.5rem 0;
+  font-size: .8rem;
+}
+
+/* Cabeçalho da tabela */
+.table-header {
+  font-weight: bold;
+  color: #ccc;
+}
+
+/* Ajustes comuns ao cabeçalho e ao corpo da tabela */
+.table-header,
+.table-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+  border-bottom: 1px solid #444;
+}
+
+/* Ajustes para centralizar o cabeçalho e os paragrafos */
+.table-header h4,
+.table-data p {
+  flex: 1;
+}
+
+/* Ajustando o tamanho somente da última coluna da tabela */
+.table-header h4:nth-child(3),
+.table-data p:nth-child(3) {
+  max-width: 80px;
+}
+
+/* Pegando a largura total do botão e centralizar o tamanho */
+#back-btn {
+  align-self: center;
+}
+
+
+/* Classes de auxílio, de acordo com o resultado do IMC */
+.good {
+  color: green;
+}
+
+.low {
+  color: yellow;
+}
+
+.medium {
+  color: #c23105;
+}
+
+.high {
+  color: #7a0400;
+}
+
